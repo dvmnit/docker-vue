@@ -1,15 +1,6 @@
 version: '2'
 
 services:
-  # web:
-  #   build: ./web
-  #   container_name: web
-  #   ports:
-  #     - 5000:5dcd000
-  #   volumes:
-  #     - ./web:/web
-  #     - web_node_modules:/web/node_modules
-
   vue :
     build: ./vue
     container_name: vue
@@ -23,5 +14,4 @@ services:
       - vue_node_modules:/vue/node_modules
 
 volumes:
-  web_node_modules:
   vue_node_modules:
