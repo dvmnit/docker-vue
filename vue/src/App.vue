@@ -10,6 +10,7 @@ export default {
   name: 'app'
 }
 </script>
+<style src="@/assets/styles/requip.css"></style>
 
 <style>
 #app {

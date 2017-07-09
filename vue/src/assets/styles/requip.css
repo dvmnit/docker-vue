@@ -1,0 +1,171 @@
+/*===========================================================================*
+ *= > _reset.scss ===========================================================*
+ *===========================================================================*/
+
+/* https://github.com/jaydenseric/Fix/blob/master/fix.css */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css */
+
+
+/*---------------------------------------------------------------------------*
+ * > Global
+ *---------------------------------------------------------------------------*/
+
+:before, :after, 
+html, body, div, p, span, a, 
+ol, ul, li, dl, dt, dd
+h1, h2, h3, h4, h5, h6, 
+b, u, i, s, q, sub, sup, small, big, code, pre, blockquote, 
+main, header, footer, section, article, aside, 
+menu, nav, details, summary,
+object, iframe, audio, video, canvas, svg, img, figure, figcaption,
+form, fieldset, legend, label,
+input, button, textarea, select, optgroup, option { 
+  display: block; 
+  box-sizing: border-box; margin: 0; padding: 0; border: 0; 
+  line-height: inherit; vertical-align: baseline;
+  font: inherit; font-size: 1em; 
+  background: none; cursor: default;
+}
+
+html, body, div, p,
+ol, ul, li, dl, dt, dd
+blockquote,
+h1, h2, h3, h4, h5, h6, 
+main, header, footer, section, article, aside, 
+menu, nav, details, summary,
+object, iframe, audio, video, canvas, svg, img, figure, figcaption,
+form, fieldset, legend, label,
+input, button, textarea, select, optgroup, option { 
+  display: block;
+}
+
+span, a, b, u, i, s, q, sub, sup, small, big, code, pre,  {
+  display: inline-block;
+}
+
+/*---------------------------------------------------------------------------*
+ * > Static Elements: Page, Text Containers, Text, Images
+ *---------------------------------------------------------------------------*/
+
+
+/*--[ Page ]-----------------------------------------------------------------*/
+
+:before, :after {
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+html {
+  cursor: default;
+  position: relative;
+  font-size: 62.5%; 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  line-height: 1rem;
+  font-family: 'Open Sans', sans; } 
+
+/*--[ Text Containers ]------------------------------------------------------*/
+
+ol, ul, li { display: inherit; list-style: none; }
+
+code { 
+  font-family: monospace monospace; 
+  font-size: inherit; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { 
+  content: ''; content: none; 
+}
+
+/*--[ Text ]-----------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 { font-size: inherit; }
+
+/*Prevents 'bolder' */
+strong { font-weight: bold; }  
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+
+sup { top: -.5em; }
+
+/*--[ Images ]--------------------------------------------------------------*/
+
+svg { fill: currentColor; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+
+/*---------------------------------------------------------------------------*
+ * > Interface Elements: Links, Inputs
+ *---------------------------------------------------------------------------*/
+
+
+/*--[ Links ]----------------------------------------------------------------*/
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+  transition: .3; }
+
+a:active, a:hover { outline: 0; transition: .3;} /* Improves readability. 
+
+/*--[ Inputs ]--------------------------------------------------------------*/
+
+textarea { resize: none; }
+
+button[disabled], input[disabled] { cursor: pointer; } 
+
+button, [role="button"], input[type="button"],
+input[type="submit"], input[type="reset"],
+textarea, [role="textbox"], input[type="text"],
+input[type="search"], input[type="password"] {
+  -moz-appearance: none; -webkit-appearance: button;
+  background-color: rgba(255,255,255,0.5);
+  border: 0; border-radius: 0; 
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.2) inset;
+  color: rgba(0,0,0,0.5);
+  font-family: 'Roboto Mono';
+  font-size: 1rem; vertical-align: middle; 
+  height: 2rem; margin: 0; padding: 0 .5rem; 
+  overflow: hidden;
+  cursor: pointer; }
+
+/*--[ Inputs > Vendor Prefixes ]---------------------------------------------*/
+
+/* TODO: Remove password icons.  */
+/* Removes search icons. */
+::-webkit-search-cancel-button,
+::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* Resets autofill. */
+@-webkit-keyframes inputReset { to {
+  background-color:rgba(255,255,255,0.5); color: rgba(0,0,0,0.5);} }
+input[type="text"],
+input[type="search"],
+input[type="password"] {
+  -webkit-animation-name:inputReset;
+  -webkit-animation-fill-mode:both; }
+
+/* Resets focus. */
+:focus { 
+  outline-style: none;
+  box-shadow: 0 0px 2px rgba(0, 0, 255, 0.8); }
+::-moz-focus-inner { 
+  outline-style: none; 
+  box-shadow: 0 0px 2px rgba(0, 0, 255, 0.8); }
