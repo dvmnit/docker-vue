@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
@@ -10,15 +9,18 @@ export default {
   name: 'app'
 }
 </script>
-<style src="@/assets/styles/requip.css"></style>
 
+<style src="@/assets/styles/requip.css"></style>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html, body {
+    width: 100%; 
+    height: 100%;
+  }
+
+  #app {
+    height: 100%;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  }
 </style>

@@ -11,7 +11,7 @@
  * > Global
  *---------------------------------------------------------------------------*/
 
-:before, :after, 
+/*:before, :after, 
 html, body, div, p, span, a, 
 ol, ul, li, dl, dt, dd
 h1, h2, h3, h4, h5, h6, 
@@ -42,12 +42,21 @@ input, button, textarea, select, optgroup, option {
 
 span, a, b, u, i, s, q, sub, sup, small, big, code, pre,  {
   display: inline-block;
-}
+}*/
 
 /*---------------------------------------------------------------------------*
  * > Static Elements: Page, Text Containers, Text, Images
  *---------------------------------------------------------------------------*/
 
+html, body, div, p, a, span, ol, ul, li {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  line-height: inherit;
+  font: inherit;
+  font-size: 1em;
+  vertical-align: baseline;
+}
 
 /*--[ Page ]-----------------------------------------------------------------*/
 
@@ -68,7 +77,7 @@ html {
 
 body {
   line-height: 1rem;
-  font-family: 'Open Sans', sans; } 
+  font-family: Helvetica, Arial, sans-serif; } 
 
 /*--[ Text Containers ]------------------------------------------------------*/
 
