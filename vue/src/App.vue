@@ -17,6 +17,10 @@ export default {
     height: 100%;
   }
 
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
   #app {
     height: 100%;
     font-size: 2rem;

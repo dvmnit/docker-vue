@@ -1,17 +1,51 @@
 version: '2'
 
 services:
-  vue :
+  srv:
+    build: ./srv
+    container_name: srv  
+    depends_on:
+      - vue
+    ports: 
+      - 80:80
+    volumes: 
+      - ./srv/conf.d:/etc/nginx/conf.d
+      - ./vue/dist:/var/www/public/dist:ro
+
+  vue:
     build: ./vue
     container_name: vue
+    depends_on: 
+      - api
     environment:
       - NODE_ENV=development
       - PORT=3000
     ports:
-      - 80:3000
+      - 3000:3000
     volumes:
       - ./vue:/vue
       - vue_node_modules:/vue/node_modules
 
+  api:
+    build: ./api
+    container_name: api
+    depends_on: 
+      - db
+    ports:
+      - 4000:4000
+    volumes: 
+      - ./api:/api
+      - api_node_modules:/api/node_modules
+
+  db:
+    build: ./db
+    container_name: db
+    ports: 
+      - 27017:27017
+    volumes:
+      - db_data:/data/db
+
 volumes:
   vue_node_modules:
+  api_node_modules:
+  db_data:
